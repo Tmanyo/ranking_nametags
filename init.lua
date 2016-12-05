@@ -31,7 +31,7 @@ end
 
 minetest.register_chatcommand("set_staff", {
      func = function(name, param)
-          minetest.show_formspec(name, "chat_enhancements:staff_sheet",
+          minetest.show_formspec(name, "ranking_nametags:staff_sheet",
                "size[8,8]" ..
                "field[1,1;5,1;host;Host:;]" ..
                "field[1,2.5;5,1;headadmin;Head Admin:;]" ..
@@ -42,7 +42,7 @@ minetest.register_chatcommand("set_staff", {
 })
 
 minetest.register_on_player_receive_fields(function(player, formname, fields)
-     if formname == "chat_enhancements:staff_sheet" then
+     if formname == "ranking_nametags:staff_sheet" then
           staff.host = fields.host
           staff.headadmin = fields.headadmin
           staff.admins = fields.admins
